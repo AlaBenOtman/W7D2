@@ -34,7 +34,7 @@ def is_password?(password) #to check the user's password when they login
     password_obj.is_password?(password)
 end
 
-  def User.find_by_credentials(email,password) 
+  def self.find_by_credentials(email,password) 
     #to find the specific user and check if the user exist and if the password is right .then we return the user else nil ( this method is made for the create section inside the controller )
     user = User.find_by(email: email)
     if user && user.is_password?(password)
